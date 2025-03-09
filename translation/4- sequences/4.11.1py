@@ -1,0 +1,72 @@
+class Stack:
+    def __init__(self):
+        # Yığın boş bir liste olarak başlar
+        self.items = []
+
+    def pop(self):
+        # Eğer yığın boşsa, hata ver
+        if self.isEmpty():
+            raise RuntimeError("Yığın boş, bir şey çıkaramam!")
+        # En üstteki öğeyi çıkar ve geri ver
+        return self.items.pop()
+
+    def push(self, item):
+        # Yeni öğeyi yığının en üstüne ekle
+        self.items.append(item)
+
+    def top(self):
+        # Eğer yığın boşsa, hata ver
+        if self.isEmpty():
+            raise RuntimeError("Yığın boş, en üstte ne var bakamam!")
+        # En üstteki öğeyi göster (ama çıkarma)
+        return self.items[-1]
+
+    def isEmpty(self):
+        # Yığın boş mu? (Evet veya Hayır)
+        return len(self.items) == 0
+
+# Test kodu (çalışıp çalışmadığını kontrol etmek için)
+def main():
+    yigin = Stack()  # Yeni bir yığın oluştur
+
+    # 0'dan 9'a kadar sayıları yığına ekle
+    for i in range(10):
+        yigin.push(i)
+
+    # En üstteki sayı 9 mu? (Doğru olmalı)
+    if yigin.top() == 9:
+        print("Test 1: Başarılı")
+    else:
+        print("Test 1: Hatalı")
+
+    # Şimdi yığındaki her şeyi çıkar ve bir listeye ekle
+    liste = []
+    while not yigin.isEmpty():
+        liste.append(yigin.pop())
+
+    # Liste ters sırada olacak, o yüzden düzelt
+    liste.reverse()
+
+    # Liste 0'dan 9'a kadar sayılarla aynı mı? (Doğru olmalı)
+    if liste == list(range(10)):
+        print("Test 2: Başarılı")
+    else:
+        print("Test 2: Hatalı")
+
+    # Yığın şu an boş. Bir şey çıkarmaya çalışırsak hata vermeli
+    try:
+        yigin.pop()
+        print("Test 3: Hatalı (hata vermedi)")
+    except RuntimeError:
+        print("Test 3: Başarılı (hata verdi)")
+
+    # Yığın hala boş. En üste bakmaya çalışırsak hata vermeli
+    try:
+        yigin.top()
+        print("Test 4: Hatalı (hata vermedi)")
+    except RuntimeError:
+        print("Test 4: Başarılı (hata verdi)")
+
+# Programı başlat
+if __name__ == "__main__":
+    main()

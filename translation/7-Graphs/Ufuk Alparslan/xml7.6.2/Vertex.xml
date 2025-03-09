@@ -1,0 +1,10 @@
+<Vertex>
+    <vertexId>{vertexId}</vertexId>
+    <x>{x}</x>
+    <y>{y}</y>
+    <label>{label}</label>
+    <adjacent>
+        <!-- Komşu düğümler buraya eklenecek -->
+    </adjacent>
+    <previous>{previous}</previous>
+</Vertex>

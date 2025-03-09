@@ -1,0 +1,5 @@
+<Edge>
+    <v1>{v1}</v1>
+    <v2>{v2}</v2>
+    <weight>{weight}</weight>
+</Edge>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Plot title="Average List Element Access Time">
+  <Axes>
+    <XAxis min="100" max="100000">List Size</XAxis>
+    <YAxis min="0" max="881676.7936000001">Microseconds</YAxis>
+  </Axes>
+  <Sequence title=" AVL tree points " color="red">
+    <DataPoint  type="I" x="100" y="0.0"/>
+    <DataPoint  type="I" x="10100" y="1535.7757"/>
+    <DataPoint  type="I" x="20100" y="10178.619900000002"/>
+    <DataPoint  type="I" x="30100" y="33204.4839"/>
+    <DataPoint  type="I" x="40100" y="76255.48329999999"/>
+    <DataPoint  type="I" x="50100" y="161119.19520000002"/>
+    <DataPoint  type="I" x="60100" y="266206.6996"/>
+    <DataPoint  type="I" x="70100" y="436280.8793"/>
+    <DataPoint  type="I" x="80100" y="628165.4265000001"/>
+    <DataPoint  type="I" x="90100" y="881676.7936000001"/>
+  </Sequence>
+  <Sequence title=" Splay tree points " color="blue">
+    <DataPoint type="I" x="100" y="0.0"/>
+    <DataPoint type="I" x="10100" y="1466.2776"/>
+    <DataPoint type="I" x="20100" y="9866.748300000001"/>
+    <DataPoint type="I" x="30100" y="31621.4045"/>
+    <DataPoint type="I" x="40100" y="77939.9239"/>
+    <DataPoint type="I" x="50100" y="153109.0068"/>
+    <DataPoint type="I" x="60100" y="261062.19970000003"/>
+    <DataPoint type="I" x="70100" y="426147.64389999997"/>
+    <DataPoint type="I" x="80100" y="607613.2884"/>
+    <DataPoint type="I" x="90100" y="865547.2718"/>
+  </Sequence>
+</Plot>

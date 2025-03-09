@@ -1,0 +1,37 @@
+4. Yüksekliği 6 olan bir yığında, Heapsort algoritmasının sürüm 2, aşama I kullanılarak yığının oluşturulması sırasında tüm düğümlerin toplam maksimum hareket mesafesi ne olur?
+
+5. Heapsort algoritmasının sürüm 1'inden __siftUpFrom() fonksiyonunu kullanarak, her adımda büyüyen bir yığına yeni bir eleman ekleyerek en büyük elemanın tepede olduğu bir yığın oluştur. Şu sayılar için işlemi gerçekleştir:
+70, 30, 25, 90, 15, 85, 35, 87, 100
+Her yapısal değişiklik olduğunda yeni yığını çizerek göster.
+
+6. Heapsort algoritmasının sürüm 2'inden __siftDownFromTo() fonksiyonunu kullanarak, önceki sorudaki aynı veri kümesi üzerinde işlemi gerçekleştir. Her yapısal değişiklik olduğunda yeni ikili ağaç çizimini yap.
+ 
+
+4NCÜ SORUNUN CEVABI:
+h=6 
+S=64-7=57
+
+5NCİ SORUNUN CEVABI:
+
+Verilen sayılar: 70, 30, 25, 90, 15, 85, 35, 87, 100
+      100
+    /     \
+   90      85
+  /  \    /  \
+ 87   70 25  35
+ /  \
+30   15
+
+6NCI SORUNUN CEVABI:
+En büyük eleman (kök) çıkarılır, yerine son düğüm getirilir ve aşağı süzülür.
+Bu işlem tüm elemanlar bitene kadar tekrar edilir.
+Her adımda en büyük eleman sona yerleşir ve yığın küçülerek sıralanır.
+Sonuç olarak sıralı liste elde edilir:
+15, 25, 30, 35, 70, 85, 87, 90, 100
+
+
+
+
+
+
+
